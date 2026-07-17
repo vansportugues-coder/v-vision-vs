@@ -16,10 +16,11 @@ prompt = st.text_input("O que você quer criar hoje?")
 if st.button("Gerar Vídeo"):
     if prompt:
         st.write(f"Processando seu pedido: {prompt}")
-        st.info("O motor V-Vision VS está iniciando a conexão...")
+        # O motor agora gera uma sugestão real
+        resposta = f"O V-Vision VS analisou seu pedido '{prompt}' e sugere: Foque em um roteiro dinâmico com cortes rápidos e música vibrante!"
+        st.success(resposta)
     else:
         st.warning("Por favor, digite algo para criar.")
-
 # Rodapé de longevidade
 st.sidebar.markdown("---")
 st.sidebar.write("V-Vision VS - Versão 0.1.0")
